@@ -7,14 +7,15 @@ public abstract class Poligono {//superclase
         this.calculatearea= calculatearea;
     }
 
-    public double getarea() {
+    public Poligono() {
+
+    }
+
+    public double getArea() {
         return calculatearea;
     }
 
-    @Override
-    public String toString() {
-        return "Area=" + calculatearea;
-    }
+
 
     public abstract double area();///metodo abstracto
 

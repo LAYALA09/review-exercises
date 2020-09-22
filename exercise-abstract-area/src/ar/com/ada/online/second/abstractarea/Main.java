@@ -1,5 +1,9 @@
 package ar.com.ada.online.second.abstractarea;
-
+//Se requiere hacer un programa en java que calcule el área de 3 figuras geométricas
+//a elección del usuario (círculo, rectángulo y triángulo). Los valores para calcular las áreas se
+//basan en los que posean atributos de cada clase.
+//La salida de cada resultado debe indicar también que tipo de figura es y con qué
+//valores se realizó el cálculo.
 
 import superclase.Poligono;
 
@@ -71,11 +75,12 @@ public class Main {
         System.out.print("\nEnter base of the  rectangle ");
         base = keyboard.nextDouble();
         System.out.print("\nEnter height  of the rectangle");
+
         height = keyboard.nextDouble();
 
-      //  Rectangle rectangle = new Rectangle(base,height);//intanciar subclase Rectangle
+        Rectangle rectangle = new Rectangle(base,height);//intanciar subclase Rectangle
         //guardamos un rectangulo dentro de poligono
-      //  poligono.add(rectangle);
+        poligono.add(rectangle);
 
     }
 

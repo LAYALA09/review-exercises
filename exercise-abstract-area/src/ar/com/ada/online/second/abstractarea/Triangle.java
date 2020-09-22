@@ -3,11 +3,11 @@ package ar.com.ada.online.second.abstractarea;
 import superclase.Poligono;
 
 public class Triangle extends Poligono {////hereda de Poligono
-    private  double basetriangle;
+    private double basetriangle;
     private double heightTriangle;
 
 
-    public Triangle(double baseTriangle,  double heightTriangle) {
+    public Triangle(double baseTriangle, double heightTriangle) {
         super(3);
 
         this.basetriangle = baseTriangle;
@@ -23,13 +23,11 @@ public class Triangle extends Poligono {////hereda de Poligono
     }
 
 
-
     @Override
     public String toString() {
-        return "Triangle: " + super.toString()+//llamo a la herencia con super
+        return "Triangle: "  +//llamo a la herencia con super
                 "\nBase=" + basetriangle +
                 "\nHeight=" + heightTriangle;
-
 
 
     }
@@ -37,7 +35,7 @@ public class Triangle extends Poligono {////hereda de Poligono
     @Override
     public double area() {  //metodo abstracto
 
-        return basetriangle*heightTriangle/2;///aplico formula para calcular triangulo
+        return basetriangle * heightTriangle / 2;///aplico formula para calcular triangulo
     }
 
 }

@@ -22,19 +22,9 @@ public class Circle extends Poligono {
     }
 
 
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Circle circle = (Circle) o;
-        return Double.compare(circle.area, area) == 0;
-    }
-
-
     @Override
     public String toString() {
-        return "Circle: " + super.toString() +
+        return "Circle: " +
                 "\nRadio=" + radio;
     }
 
