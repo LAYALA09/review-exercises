@@ -1,21 +1,21 @@
 package superclase;
 
-public abstract class Poligono {
-    protected int numberSides;
+public abstract class Poligono {//superclase
+    protected double calculatearea;
 
-    public Poligono(int numberSides) {
-        this.numberSides = numberSides;
+    public Poligono(double calculatearea) {
+        this.calculatearea= calculatearea;
     }
 
-    public int getNumberSides() {
-        return numberSides;
+    public double getarea() {
+        return calculatearea;
     }
 
     @Override
     public String toString() {
-        return "Number the sides=" + numberSides ;
+        return "Area=" + calculatearea;
     }
 
-    public abstract double area();
+    public abstract double area();///metodo abstracto
 
 }

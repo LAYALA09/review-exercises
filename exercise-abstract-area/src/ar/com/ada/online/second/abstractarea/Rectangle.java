@@ -3,29 +3,28 @@ package ar.com.ada.online.second.abstractarea;
 import superclase.Poligono;
 
 public class Rectangle extends Poligono {
-    private  double oneSide;
-    private double secondSide;
+    private  double base;
+    private double height;
 
-    public Rectangle( double oneSide, double secondSide) {
-        super(2);
-        this.oneSide = oneSide;
-        this.secondSide = secondSide;
-
+    public Rectangle(double calculatearea, double base, double height) {
+        super(calculatearea);
+        this.base = base;
+        this.height = height;
     }
 
-    public double getOneSide() {
-        return oneSide;
+    public double getheightRectangle() {
+        return height;
     }
 
-    public double getSecondSide() {
-        return secondSide;
+    public double getbaseRectangle() {
+        return base;
     }
 
     @Override
     public String toString() {
-        return "Rectangle: " + super.toString()+
-                "\noneSide=" + oneSide +
-                ", secondSide=" + secondSide ;
+        return "Rectangle: "+super.toString()+
+                "\nBase rectangle=" + base +
+                ", Height rectangle=" + height;
     }
 
     @Override
@@ -33,8 +32,8 @@ public class Rectangle extends Poligono {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Rectangle rectangle = (Rectangle) o;
-        return Double.compare(rectangle.oneSide, oneSide) == 0 &&
-                Double.compare(rectangle.secondSide, secondSide) == 0;
+        return Double.compare(rectangle.base, base) == 0 &&
+                Double.compare(rectangle.height, height) == 0;
     }
 
 
@@ -42,6 +41,6 @@ public class Rectangle extends Poligono {
     @Override
     public double area() {//met0do abstracto
 
-        return oneSide*secondSide;
+        return base*height;
     }
 }
