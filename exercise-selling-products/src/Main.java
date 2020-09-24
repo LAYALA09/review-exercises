@@ -2,8 +2,10 @@ import ar.com.ada.online.second.sellingproducts.Food;
 import ar.com.ada.online.second.sellingproducts.wetakeoutaneyeonyou.Products;
 
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
+
 
 public class Main {
 
@@ -12,9 +14,9 @@ public class Main {
 
 
     public static void main(String[] args) {
-        ArrayList<Products> products = new ArrayList<>();
-       // products.loadingFood();//llenar productos
-       // showResult();//mostrar resultado
+        ArrayList<File>Products> products = new ArrayList<>();
+        loadingFood();//llenar productos
+        showResult();//mostrar resultado
     }
 
     //llenar productos
@@ -33,7 +35,7 @@ public class Main {
             } while (option < 1 || option > 5);///solo ejecuta mientras que la opcion sea entre 1y 3
             switch (option) {
                 case 1:
-                   // fillProducts.loadingFood();// cargar alimentos
+                    loadingFood();// cargar alimentos
                     break;
                 case 2:
                     // loadingClothes(); // cargar prendas
@@ -52,7 +54,8 @@ public class Main {
 
 
     //llenado de food
-    public static void loadingFood(ArrayList<Products> products) {
+    public static void loadingFood() {
+        ArrayList<File> products=new ArrayList<File>();
         int day;
         int cp = 0;
         double code, price;
@@ -75,14 +78,15 @@ public class Main {
             totalPriced += priced;
             cp = cp + 1;
         }
-        cp = cp + 1;
-        Food food = new Food();
-        // Food food = new Food(code);
-        // Food food1 = new Food(price);//intanciar subclase alimentos
+        //Food food = new Food();//instancie clase Food
+
+
         //guardamos alimentos dentro de productos
-        //product.add(dia);
-        products.add(food);
-        //product.add(food1);
+        products.add(new File(day,code,price));
+        //File Food =(File)products.day);
+
+        //products.add(food);
+
 
     }
 
@@ -91,7 +95,7 @@ public class Main {
         //recorriendo el arreglo de producto
         for (Products codi : products) {
             System.out.println(codi.toString());
-            System.out.println("Vista" + codi.Cprice());
+
             System.out.println("");
         }
     }
