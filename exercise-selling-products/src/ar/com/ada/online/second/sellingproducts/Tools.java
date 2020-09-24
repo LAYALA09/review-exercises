@@ -1,4 +1,10 @@
 package ar.com.ada.online.second.sellingproducts;
 
-public class Tools {
+import ar.com.ada.online.second.sellingproducts.wetakeoutaneyeonyou.Products;
+
+public class Tools extends Products {
+    @Override
+    public double Cprice() {
+        return 0;
+    }
 }
