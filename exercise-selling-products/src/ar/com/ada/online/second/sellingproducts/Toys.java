@@ -2,7 +2,7 @@ package ar.com.ada.online.second.sellingproducts;
 
 import ar.com.ada.online.second.sellingproducts.wetakeoutaneyeonyou.Products;
 
-public class Toys extends Products {
+public class Toys extends Product {
     private double price;
 
     public Toys(double price) {

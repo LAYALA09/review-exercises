@@ -2,7 +2,7 @@ package ar.com.ada.online.second.sellingproducts;
 
 import ar.com.ada.online.second.sellingproducts.wetakeoutaneyeonyou.Products;
 
-public class Food extends Products {
+public class Food extends Product {
 
     private double code;
     private int day, cp;
@@ -13,11 +13,10 @@ public class Food extends Products {
     }
 
 
-
-    public Food( int day,double code,double price) {
-        this.day=day;
+    public Food(int day, double code, double price) {
+        this.day = day;
         this.code = code;
-        this.price=price;
+        this.price = price;
 
     }
 
@@ -33,19 +32,7 @@ public class Food extends Products {
 
     @Override
     public double Cprice() {//metodo abstracto
-       /*if (day == 2 || day == 4) {
-            cp = cp + 1;
-            totalsindesc += price;
-            priced = super.price - (price * 0.25);
-            totalPriced += priced;
-        } else {
-            priced = super.price;
-            totalPriced += priced;
-            cp = cp + 1;
-        }
-        return null
 
-        code + priced + +cp + +totalsindesc + +totalPriced;*/
         return price;
     }
 

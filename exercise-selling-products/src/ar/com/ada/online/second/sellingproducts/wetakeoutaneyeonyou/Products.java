@@ -1,13 +1,13 @@
 package ar.com.ada.online.second.sellingproducts.wetakeoutaneyeonyou;
 
-public  abstract class   Products {
+public  abstract class   Product {
     protected double price;
 
-      public Products(){
+      public Product(){
 
       }
 
-    public Products(double price) {
+    public Product(double price) {
         this.price = price;
     }
 

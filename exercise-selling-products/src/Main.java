@@ -9,18 +9,18 @@ import java.util.Scanner;
 
 public class Main {
 
-   // static ArrayList<Products> product = new ArrayList<Products>();///arreglo dinamico al estar fuera de main tiene que ser static y hay q importar la clase de ArrayList.
+
     static Scanner keyboard = new Scanner(System.in);
 
 
     public static void main(String[] args) {
-        ArrayList<File>Products> products = new ArrayList<>();
+        ArrayList<Product> product = new ArrayList<>();
         loadingFood();//llenar productos
         showResult();//mostrar resultado
     }
 
     //llenar productos
-    public static void fillProducts(ArrayList<Products> products) {
+    public static void fillProducts(ArrayList<Product> product) {
         int option;
         char response;
         do {
@@ -32,10 +32,10 @@ public class Main {
                 System.out.println("4. Toys");
                 System.out.print("Option: ");
                 option = keyboard.nextInt();
-            } while (option < 1 || option > 5);///solo ejecuta mientras que la opcion sea entre 1y 3
+            } while (option < 1 || option > 5);///solo ejecuta mientras que la opcion sea entre 1y 4
             switch (option) {
                 case 1:
-                    loadingFood();// cargar alimentos
+                    loadingFood();// cargar alimentos  //FALTA ALGO
                     break;
                 case 2:
                     // loadingClothes(); // cargar prendas
@@ -54,8 +54,8 @@ public class Main {
 
 
     //llenado de food
-    public static void loadingFood() {
-        ArrayList<File> products=new ArrayList<File>();
+    public static void loadingFood(ArrayList<Product> product) {
+
         int day;
         int cp = 0;
         double code, price;
@@ -78,22 +78,19 @@ public class Main {
             totalPriced += priced;
             cp = cp + 1;
         }
-        //Food food = new Food();//instancie clase Food
+        Food food = new Food();//instancie clase Food
 
 
         //guardamos alimentos dentro de productos
-        products.add(new File(day,code,price));
-        //File Food =(File)products.day);
-
-        //products.add(food);
+        product.add(food);
 
 
     }
 
 
-    public static void showResult(ArrayList<Products> products) { //metodo para mostrar resultados
-        //recorriendo el arreglo de producto
-        for (Products codi : products) {
+    public static void showResult(ArrayList<Product> product) { //metodo para mostrar resultados
+        //recorriendo la lista de producto
+        for (Product codi : product) {
             System.out.println(codi.toString());
 
             System.out.println("");
